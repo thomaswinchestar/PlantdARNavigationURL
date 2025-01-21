@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plantd Skincare</title>
+    <style>
+        @font-face {
+            font-family: 'Scandia-Bold';
+            src: url('Scandia-Bold.ttf') format('truetype');
+        }
+
+        @font-face {
+            font-family: 'Scandia-Regular';
+            src: url('Scandia-Regular.ttf') format('truetype');
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Scandia-Regular', sans-serif;
+            background-color: #000;
+            background-image: url('abstract-blur-shopping-mall.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            margin: 0;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.9);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            z-index: 1;
+        }
+
+        .container {
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .logo-container {
+            margin-bottom: 40px;
+            width: 100%;
+            max-width: 300px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .logo-img {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin-bottom: 20px;
+        }
+
+        .logo {
+            display: none;
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+            text-transform: lowercase;
+        }
+
+        .question {
+            font-family: 'Scandia-Regular', sans-serif;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            line-height: 1.4;
+        }
+
+        .jar-options {
+            display: flex;
+            justify-content: center;
+            align-items: baseline;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .jar-option {
+            cursor: pointer;
+            transition: transform 0.2s;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            padding: 20px;
+            background-color: transparent;
+            text-decoration: none;
+        }
+
+        .jar-option:hover {
+            transform: scale(1.05);
+            text-decoration: none;
+        }
+
+        .jar-icon {
+            width: 120px;
+            height: auto;
+            display: block;
+        }
+
+        @media (max-width: 480px) {
+            .logo-container {
+                max-width: 200px;
+            }
+
+            .subtitle {
+                font-size: 1.2rem;
+            }
+
+            .jar-options {
+                gap: 20px;
+            }
+
+            .jar-option {
+                padding: 10px;
+            }
+
+            .jar-icon {
+                width: 80px;
+            }
+
+            .jar-size {
+                font-size: 1rem;
+            }
+
+            .question {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo-container">
+            <img src="Plantd_Logo_Square.png" alt="Plantd Skincare" class="logo-img">
+        </div>
+        
+        <p class="question">Which size jar do you have?<br>Tap below to start</p>
+        <div class="jar-options">
+            <a href="https://ar.brndwrx.com" class="jar-option">
+                <img src="Jar 8oz.png" alt="8oz Jar" class="jar-icon" />
+            </a>
+            <a href="https://2oz-ar.brndwrx.com" class="jar-option">
+                <img src="Jar 2oz.png" alt="2oz Jar" class="jar-icon" />
+            </a>
+        </div>
+    </div>
+
+    <script>
+        function selectJar(size) {
+            // Handle jar selection here
+            console.log(`Selected ${size} jar`);
+        }
+    </script>
+</body>
+</html>
